@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/course_card_height"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/course_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        tools:src="@drawable/sample_course_image" />
+
+    <LinearLayout
+        android:id="@+id/course_data"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/course_detail_card_height"
+        android:layout_gravity="bottom"
+        android:background="@color/transparent_white_85"
+        android:orientation="vertical"
+        android:paddingEnd="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        tools:targetApi="17">
+
+        <TextView
+            android:id="@+id/course_name"
+            style="@style/course_card_title"
+            android:text="@string/course_name"
+            tools:targetApi="17" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:targetApi="17">
+
+            <TextView
+                android:id="@+id/school_code"
+                style="@style/course_card_course_run"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxWidth="150dp"
+                android:text="@string/school_code"
+                android:textDirection="locale" />
+
+            <TextView
+                android:id="@+id/no_of_videos"
+                style="@style/regular_grey_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:ellipsize="end"
+                android:maxWidth="150dp"
+                android:singleLine="true"
+                android:textColor="@color/org_code_txt"
+                android:textSize="12sp"
+                tools:targetApi="17"
+                tools:text="2 Videos," />
+
+            <TextView
+                android:id="@+id/size_of_videos"
+                style="@style/regular_grey_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxWidth="150dp"
+                android:paddingEnd="0dp"
+                android:paddingLeft="7dp"
+                android:paddingRight="0dp"
+                android:paddingStart="7dp"
+                android:singleLine="true"
+                android:textColor="@color/org_code_txt"
+                android:textSize="12sp"
+                tools:targetApi="17"
+                tools:text="890 MB" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- put a frame over this cell, so that corners look rounded -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_frame_course" />
+</FrameLayout>

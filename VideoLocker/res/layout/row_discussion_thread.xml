@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/edx_margin"
+    android:paddingTop="@dimen/edx_margin"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <org.edx.mobile.view.custom.IconImageViewXml
+        android:id="@+id/discussion_post_type_icon"
+        style="@style/icon_view_standard_size"
+        android:layout_margin="@dimen/edx_margin"
+        app:iconColor="@color/edx_grayscale_neutral_light" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/discussion_post_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/edx_grayscale_neutral_x_dark"
+            android:textSize="@dimen/edx_small"
+            tools:text="This is a post title. It is a very long title to demonstrate that post titles will be truncated when they are too long." />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x_small_icon_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <org.edx.mobile.view.custom.IconImageViewXml
+                android:id="@+id/discussion_post_closed_icon"
+                android:layout_width="@dimen/edx_x_small"
+                android:layout_height="@dimen/edx_x_small"
+                android:layout_marginEnd="@dimen/discussion_posts_icon_margin"
+                android:layout_marginRight="@dimen/discussion_posts_icon_margin"
+                app:iconColor="@color/edx_grayscale_neutral_base"
+                app:iconName="fa-lock" />
+
+            <org.edx.mobile.view.custom.IconImageViewXml
+                android:id="@+id/discussion_post_pin_icon"
+                android:layout_width="@dimen/edx_x_small"
+                android:layout_height="@dimen/edx_x_small"
+                android:layout_marginEnd="@dimen/x_small_icon_margin"
+                android:layout_marginRight="@dimen/x_small_icon_margin"
+                app:iconColor="@color/edx_grayscale_neutral_base"
+                app:iconName="fa-thumb-tack" />
+
+            <org.edx.mobile.view.custom.IconImageViewXml
+                android:id="@+id/discussion_post_following_icon"
+                android:layout_width="@dimen/edx_x_small"
+                android:layout_height="@dimen/edx_x_small"
+                android:layout_marginEnd="@dimen/x_small_icon_margin"
+                android:layout_marginRight="@dimen/x_small_icon_margin"
+                app:iconColor="@color/edx_grayscale_neutral_base"
+                app:iconName="fa-star" />
+
+            <TextView
+                android:id="@+id/discussion_post_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/edx_grayscale_neutral_base"
+                android:textSize="@dimen/edx_x_small"
+                tools:text="By Staff" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/discussion_post_indicator_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/edx_small"
+        android:layout_margin="@dimen/edx_margin"
+        android:drawablePadding="3sp"
+        tools:text="42" />
+
+</LinearLayout>

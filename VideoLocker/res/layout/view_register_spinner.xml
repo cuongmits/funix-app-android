@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="4dp"
+    android:paddingBottom="2dp">
+
+    <org.edx.mobile.module.registration.view.RegistrationOptionSpinner
+        android:id="@+id/input_spinner"
+        style="@style/spinner"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/hint_grey_text"
+        android:paddingLeft="5dp"
+        android:paddingStart="5dp"
+        android:paddingRight="10dp"
+        android:paddingEnd="10dp"
+        tools:targetApi="17"/>
+
+    <TextView
+        android:id="@+id/input_spinner_error"
+        style="@style/registration_error_message"
+        android:visibility="visible"
+        tools:text="error text here"/>
+
+    <TextView
+        android:id="@+id/input_spinner_instruction"
+        style="@style/registration_instruction_message"
+        android:visibility="visible"
+        tools:text="instructions here"/>
+
+</LinearLayout>

@@ -1,0 +1,291 @@
+import org.edx.builder.TaskHelper
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+
+    }
+
+    dependencies {
+        classpath 'org.yaml:snakeyaml:1.14'
+
+        //Included for NewRelic
+        classpath "com.newrelic.agent.android:agent-gradle-plugin:5.4.0"
+
+    }
+}
+
+
+apply plugin: 'edxapp'
+edx {
+    platform = ANDROID
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'newrelic'
+
+apply from: 'jacoco.gradle'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+}
+
+
+class AndroidHelper {
+
+    def saveProcessedConfig(project, config) {
+        def path = project.file('assets/config')
+        path.mkdirs()
+        def jsonWriter = new FileWriter(path.absolutePath + '/config.json')
+        def builder = new groovy.json.JsonBuilder(config)
+        jsonWriter.withWriter {
+            builder.writeTo(it)
+        }
+    }
+}
+
+dependencies {
+    compile project (':android-iconify')
+    // Note that we have the Font Awesome TTF file
+    // in the local assets as well, to enable the
+    // graphical layout editor to render it. Since
+    // that is what will be compiled in the APK now,
+    // we need to ensure that it's updated along
+    // with module updates.
+    compile project (':android-iconify-fontawesome')
+    compile ('com.getbase:floatingactionbutton:1.10.1') {
+        exclude module: 'support-annotations'
+    }
+    compile fileTree(dir: 'libs', include: '*.jar')
+    compile 'commons-io:commons-io:2.4'
+    compile 'com.facebook.android:facebook-android-sdk:3.23.1'
+    compile 'com.google.android.gms:play-services-plus:8.4.0'
+    compile 'com.google.android.gms:play-services-analytics:8.4.0'
+    compile 'com.google.code.gson:gson:2.3'
+    compile 'de.greenrobot:eventbus:2.4.1'
+    compile 'com.squareup.phrase:phrase:1.1.0'
+    compile 'com.squareup.okhttp3:okhttp:3.0.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.0.1'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.jakewharton.retrofit:retrofit1-okhttp3-client:1.0.2'
+    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.android.support:cardview-v7:23.1.1'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'uk.co.chrisjenx:calligraphy:2.1.0'
+
+    // Segment Library
+    compile('com.segment.analytics.android:analytics-core:3.4.0@aar') {
+        transitive = true
+    }
+    compile('com.segment.analytics.android:analytics-integration-google-analytics:3.4.0@aar') {
+        exclude module: 'play-services-analytics'
+        transitive = true
+    }
+
+    //Crashlytics Kit
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
+        transitive = true
+    }
+
+    //New Relic Integration
+    compile 'com.newrelic.agent.android:android-agent:5.4.0'
+
+    // Parse notification service
+    compile 'com.parse:parse-android:1.13.0'
+    compile 'com.parse.bolts:bolts-android:1.4.0'
+
+    //Include DI framework
+    compile 'org.roboguice:roboguice:3.0.1'
+    provided 'org.roboguice:roboblender:3.0.1'
+
+    // For the optional Nullable annotation
+    compile 'com.android.support:support-annotations:23.1.1'
+
+    // test project configuration
+    testCompile 'junit:junit:4.12'
+    testCompile ("org.mockito:mockito-core:1.10.19"){
+        exclude group: 'org.hamcrest'
+    }
+    testCompile "org.robolectric:robolectric:3.0"
+    testCompile "org.robolectric:shadows-support-v4:3.0"
+    testCompile "org.robolectric:shadows-multidex:3.0"
+    testCompile 'org.assertj:assertj-core:1.7.1'
+    testCompile ('com.squareup.assertj:assertj-android:1.1.1') {
+        exclude group: 'com.android.support'
+    }
+    testCompile ('com.squareup.assertj:assertj-android-support-v4:1.1.1') {
+        exclude group: 'com.android.support'
+    }
+    testCompile 'com.squareup.okhttp3:mockwebserver:3.0.1'
+
+    androidTestCompile 'com.android.support.test:runner:0.4.1'
+    androidTestCompile 'com.android.support.test:rules:0.4.1'
+    androidTestCompile 'org.hamcrest:hamcrest-library:1.3'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
+}
+
+configurations {
+    androidTestCompile.exclude group: 'com.android.support', module: 'support-annotations'
+    androidTestCompile.exclude group: 'com.android.support', module: 'multidex'
+    androidTestCompile.exclude group: 'javax.inject'
+    androidTestCompile.exclude group: 'javax.annotation'
+}
+
+android {
+    def config = new TaskHelper().loadConfig(project)
+
+    signingConfigs {
+        releasekey {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+    }
+
+    compileSdkVersion 23
+    buildToolsVersion BUILD_TOOLS_VERSION
+
+    useLibrary 'org.apache.http.legacy'
+
+    dataBinding {
+        enabled = true
+    }
+
+    dexOptions {
+        javaMaxHeapSize "2g"
+    }
+
+    defaultConfig {
+        applicationId "vn.edu.funix.mobile"
+        // minimum version is Android 4.0
+        minSdkVersion 14
+        targetSdkVersion 18
+        versionCode 77
+        versionName "2.2.0"
+
+        renderscriptTargetApi 22
+        renderscriptSupportModeEnabled true
+
+        // test configuration
+        testApplicationId 'vn.edu.funix.mobile.test'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testHandleProfiling true
+        testFunctionalTest true
+        testBuildType "debuggable"
+
+        // Enabling multidex support.
+        multiDexEnabled true
+
+        manifestPlaceholders = [ supportsRtl:"false"]
+
+        def platformName = config.get('PLATFORM_NAME')
+        resValue "string", "platform_name", platformName
+
+        def fabric = config.get('FABRIC')
+        if (fabric?.get('ENABLED')) {
+            def fabric_key = fabric?.get('FABRIC_KEY')
+            if (null == fabric_key) {
+                throw new GradleException("You must set FABRIC_KEY if Fabric is enabled")
+            } else {
+                resValue "string", "io.fabric.ApiKey", fabric_key
+                resValue "bool", "com.crashlytics.RequireBuildId", "false"
+            }
+        }
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            resources.srcDirs = ['src/main/java']
+            aidl.srcDirs = ['src/main/java']
+            renderscript.srcDirs = ['src/main/java']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml.
+        // This moves them out of default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+    lintOptions {
+        abortOnError false
+        lintConfig file("lint.xml")
+        disable 'MissingTranslation'
+    }
+
+    productFlavors {
+        prod { }
+
+        dev {
+            minSdkVersion 18 // Disables multidex to drastically speed up build: https://developer.android.com/tools/building/multidex.html#dev-build
+        }
+    }
+
+    buildTypes {
+        debug {
+            testCoverageEnabled true
+            pseudoLocalesEnabled true // Set device language to "en_XA" to test glyphs, or "ar_XB" to test RTL support
+            manifestPlaceholders = [ supportsRtl:"true"]
+        }
+        debuggable.initWith(buildTypes.debug)
+        debuggable {
+            testCoverageEnabled = false // Set to "false" to work around debugger issue: https://code.google.com/p/android/issues/detail?id=123771
+        }
+
+        release {
+            signingConfig signingConfigs.releasekey
+        }
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'APK LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    testOptions { 
+         unitTests.all {
+             maxHeapSize '1024m'
+             jvmArgs '-XX:MaxPermSize=512m'
+         }
+    }
+}
+
+
+android.applicationVariants.all { variant ->
+    def variantName = variant.name.capitalize()
+    def taskName = "applyConfig" + variantName
+    def configureTask = project.task(taskName) << {
+        def taskHelper = new TaskHelper()
+        def helper = new AndroidHelper()
+        def config = taskHelper.loadConfig(project)
+        helper.saveProcessedConfig(project, config)
+    }
+    def generateTask = project.tasks.getByName("generate" + variantName + "Resources")
+    generateTask.dependsOn(configureTask)
+
+    tasks.all {task ->
+        if (task.name.startsWith("test")) {
+            task.mustRunAfter(configureTask)
+        }
+    }
+}

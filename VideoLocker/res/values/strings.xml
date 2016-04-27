@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">@string/platform_name</string>
+
+    <!-- Certificates -->
+
+    <!-- Label congratulation user on finishing course -->
+    <string name="course_details_congratulations">Chúc mừng!</string>
+    <!-- Message for user who has successfully completed a certificate course -->
+    <string name="course_details_earned_cert">Bạn vừa mới hoàn thành khóa học.</string>
+    <!-- Button that opens a full view of an earned certificate -->
+    <string name="course_details_view_cert_button">Xem Chứng chỉ</string>
+
+    <!-- Course Discovery -->
+
+    <!-- Enroll Now button text -->
+    <string name="course_detail_enroll_now_button">Ghi danh ngay</string>
+    <!-- Enroll Now button text-->
+    <string name="enroll_now_button_text">Ghi danh ngay</string>
+    <!-- View Course button text text-->
+    <string name="view_course_button_text">Xem khóa học</string>
+    <!-- Floating overlay text shown to user when they succeed at enrolling in a course -->
+    <string name="you_are_now_enrolled">Bạn vừa ghi danh khóa học này.</string>
+    <!-- Error shown user attempts to enroll in a course they are already enrolled in -->
+    <string name="already_enrolled">Bạn đã ghi danh khóa học này.</string>
+    <!-- Error message shown when dashboard cannot be shown from course detail view -->
+    <string name="cannot_show_dashboard">Không thể hiện thị dashboard.</string>
+
+
+
+    <!-- Course Sharing -->
+
+    <!-- Description of button that will open the share course menu -->
+    <string name="share_course_button">Chia sẻ khóa học</string>
+    <!-- Share menu title -->
+    <string name="share_course_popup_header">Chia sẻ khóa học này qua&#8230;</string>
+    <!-- Share course -->
+    <string name="share_course_message">Tôi đang tham gia khóa học trên {platform_name}! Check it out:</string>
+
+    <!-- Settings Page -->
+    <!-- Label for wifi only switch -->
+    <string name="settings_wifi_top">Chỉ tải với Wi-Fi</string>
+    <!-- Label explaining what wifi only means in detail -->
+    <string name="settings_wifi_bottom">Chỉ tải nội dung khi Wifi được bật</string>
+
+    <!-- Certificate Page -->
+    <!-- Description of button that will open the certificate sharing menu -->
+    <string name="share_certificate_button">Chia sẻ chứng chỉ của bạn</string>
+    <!-- Text that pre-populates your post/email/SMS when sharing certificate -->
+    <string name="share_certificate_message">Tôi vừa hoàn thành Chứng chỉ trên {platform_name}! Check it out: {certificate_url}</string>
+    <!-- Tab of tab for certicate for finished course -->
+    <string name="tab_label_certificate">Chứng chỉ</string>
+    <!-- Header for popup list of share targets -->
+    <string name="share_certificate_popup_header">Chia sẻ chứng chỉ của bạn thông qua…</string>
+
+    <!-- Data Usage Dialog -->
+    <!-- Alert dialog error message shown when using a feature with a required Internet connection -->
+    <string name="need_data">Tính năng này yêu cầu kết nối Internet.</string>
+
+    <!-- Login Activity Place Holders -->
+    <!-- Hint text for login field -->
+    <string name="email_username">Tên hoặc địa chỉ email</string>
+    <!-- Hint text for email address field in reset password dialog -->
+    <string name="email">Địa chỉ email</string>
+    <!-- Hint text for password field -->
+    <string name="password">Mật khẩu</string>
+    <!-- Button text allowing user to reset their password -->
+    <string name="forgot_password">Quên mật khẩu?</string>
+    <!-- Button initiating login process after user enters credentials like username and password -->
+    <string name="login">Đăng nhập</string>
+    <!-- Accessible content description of sign in button on Log in screen -->
+    <string name="login_btn">Nút đăng nhập</string>
+    <!-- Message shown while waiting for action -->
+    <string name="progressText">Vui lòng đợi....</string>
+    <!-- Message shown while user waits for response to a sign in request-->
+    <string name="signing_in">Đang đăng nhập...</string>
+    <!-- Message for shown after tapping Sign In -->
+    <string name="error_message">Thông báo lỗi</string>
+    <!-- Generic error during log in -->
+    <string name="error_heading">Lỗi sau xuất hiện khi đăng nhập</string>
+    <!-- Error during log in. -->
+    <string name="login_failed">Hãy chắc chắn tên hoặc địa chỉ email và mật khẩu của bạn được nhập đúng và hãy thử lại.</string>
+    <!-- Error logging in without activating account. -->
+    <string name="login_failed_no_grant">Tài khoản này chưa được kích hoạt. Hãy kiểm tra hướng dẫn kích hoạt trong email của bạn.</string>
+    <!-- Button text allowing a user to go to the register screen -->
+    <string name="new_user">Đăng ký tài khoản?</string>
+    <string name="by_signing_up">Đăng nhập vào ứng dụng này, tức là bạn đã đồng ý với </string>
+    <string name="licensing_agreement">{platform_name} Điều khoản Dịch vụ</string>
+    <string name="login_title">Đăng nhập vào {platform_name}</string>
+    <!-- Accessible content description of close button on Sign in and Sign up screen -->
+    <string name="close">Đóng lại</string>
+    <!-- Accessible content description prefix of dropdowns on Sign up screen, like, country and gender dropdowns -->
+    <string name="dropdown_list_prefix">Danh sách đổ.</string>
+
+    <!-- Navigation Drawer Labels -->
+    <!-- Button to open drawer -->
+    <string name="label_open_drawer">Mở Điều hướng</string>
+    <!-- Button to open drawer -->
+    <string name="label_close_drawer">Đóng Điều hướng</string>
+    <!-- Button text to show user Settings screen -->
+    <string name="action_settings">Thiết lập</string>
+    <!-- Title of user's course list screen -->
+    <string name="label_my_courses">Khóa học của tôi</string>
+    <!-- Title of user's downloaded videos list screen -->
+    <string name="label_my_videos">Video của tôi</string>
+    <!-- Title of Find Courses screen -->
+    <string name="label_find_courses">Tìm kiếm khóa học</string>
+    <!-- Button allowing users to send an email for feedback -->
+    <string name="label_submit_feedback">Gửi Feedback</string>
+    <!-- Toggle switch on state label -->
+    <string name="toggle_turn_on">Bật</string>
+    <!-- Toggle switch off state label -->
+    <string name="toggle_turn_off">Tắt</string>
+    <!-- Logout button label -->
+    <string name="logout">Đăng xuất</string>
+    <!-- Settings screen title -->
+    <string name="settings_txt">Thiết lập</string>
+    <!-- Settings screen version -->
+    <string name="label_version">Phiên bản</string>
+    <!-- Button text to show user Settings screen -->
+    <string name="label_settings">Thiết lập của tôi</string>
+
+    <!-- Help Dialog Place Holder messages -->
+    <!-- Reset password alert dialog title -->
+    <string name="confirm_dialog_title_help">Đổi mật khẩu</string>
+    <!-- Reset password alert dialog message -->
+    <string name="success_dialog_title_help">Email đổi mật khẩu đã được gửi</string>
+    <!-- Reset password alert dialog title -->
+    <string name="title_reset_password_failed">Reset Password Error</string>
+    <!-- Label for switch controlling whether users permit downloading using cellular data or only wifi -->
+    <string name="wifi_dialog_title_help">Cho phép tải bằng dữ liệu di động</string>
+    <!-- Password reset sent succesfully alert -->
+    <string name="success_dialog_message_help">We’ve sent a message with password reset instructions to your e-mail address.
+        If you don’t see it in the next few minutes, make sure to check your spam folder.</string>
+    <!-- Password reset dialog prompt -->
+    <string name="confirm_dialog_message_help">Enter the e-mail address for your account, and we’ll send you instructions to reset your password.</string>
+    <!-- Label explaining toggle for cellular data access -->
+    <string name="wifi_dialog_message_help">Cho phép thiết bị của bạn tải video thông qua dữ liệu di động khi Wifi không làm việc. Phí dữ liệu có thể được tính.</string>
+    <!-- Confirmation text for delete video dialog -->
+    <string name="delete_dialog_title_help">Confirm Delete</string>
+    <plurals name="delete_video_dialog_msg">
+        <item quantity="one">Bạn có chắc muốn xóa video này?</item>
+        <item quantity="other">Bạn có chắc muốn xóa những video này?</item>
+    </plurals>
+    <!-- Alert dialog button label -->
+    <string name="delete_successful_dialog_title_help">Xóa</string>
+    <!-- Alert dialog title for users with zero rated data -->
+    <string name="leaving_app_data_title">Rời ứng dụng {platform_name}</string>
+    <!-- Alert dialog content for users with zero rated data -->
+    <string name="leaving_app_data_message">If you leave the app, you will no longer be viewing free {platform_name} content. Data charges may apply.</string>
+    <!-- Reset Dialog Fragment Place Holder messages -->
+    <string name="reset_dialog_title">Reset Title</string>
+    <!-- Title of agreement users must accept to use the app -->
+    <string name="end_user_title">End User License Agreement</string>
+
+    <!-- My Courses -->
+    <!-- Row of course on dashboard screen -->
+    <string name="courseware_title">Giáo trình</string>
+    <!-- Row of course on dashboard screen -->
+    <!-- NOTE: TODO - not final one -->
+    <string name="courseware_subtitle">Truy cập video và bài tập</string>
+    <!-- Row of Discussion on dashboard screen -->
+    <string name="discussion_title">Thảo luận</string>
+    <!-- Row of Discussion on dashboard screen -->
+    <!-- NOTE: TODO - not final one -->
+    <string name="discussion_subtitle">Join the conversation</string>
+    <!-- Row of Handouts on dashboard screen -->
+    <string name="handouts_title">Handouts</string>
+    <!-- Row of Handouts on dashboard screen -->
+    <!-- NOTE: TODO - not final one -->
+    <string name="handouts_subtitle">Tìm thông tin khóa học quan trọng</string>
+    <!-- Row of announcement on dashboard screen -->
+    <string name="announcement_title">Thông báo</string>
+    <!-- Row of announcement on dashboard screen -->
+    <!-- NOTE: TODO - not final one -->
+    <string name="announcement_subtitle">Cập nhật những thông tin mới nhất</string>
+    <!-- Accessible content description of school code label a course -->
+    <string name="school_code">School Code</string>
+    <!-- Accessible content description of course code label for a course -->
+    <string name="course_code">Course Code</string>
+    <!-- Accessible content description of course name label field -->
+    <string name="course_name">Course Name</string>
+    <!-- Label indicating new course content has been downloaded -->
+    <string name="new_course_content">Nội dụng khóa học mới</string>
+    <!-- Label for date when course starts -->
+    <string name="label_starting">Bắt đầu - {date}</string>
+    <!-- Label for course that has ended -->
+    <string name="label_ended">Kết thúc - {date}</string>
+    <!-- Label for date when course is ending -->
+    <string name="label_ending">Ending - {date}</string>
+    <!-- Title for the course filter menu popup -->
+    <string name="course_view_modes">Course View Modes</string>
+    <!-- Label for the course filter menu popup option for filtering by videos only -->
+    <string name="course_view_mode_videos_only">Videos Only</string>
+    <!-- Label for the course filter menu popup option for displaying the full course -->
+    <string name="course_view_mode_full_course">Full Course</string>
+    <!-- Label for the menu popup for viewing the course on the web -->
+    <string name="course_view_on_web">View on Web</string>
+    <!-- Label for the menu popup for changing mode to Videos Only/Full Course -->
+    <string name="course_change_mode">Mode picker</string>
+
+    <!-- Course Details -->
+    <!-- Accessible content description of label for course content -->
+    <string name="course_content">Nội dung khóa học</string>
+    <!-- Accessible content description of label for course name -->
+    <string name="chapter_name">Tên khóa học</string>
+    <!-- Tab title for courseware section -->
+    <string name="tab_label_courseware">Giáo trình</string>
+    <!-- Tab title for course announcements section -->
+    <string name="tab_label_announcement">Thông báo</string>
+    <!-- Tab title for course handouts section -->
+    <string name="tab_label_handouts">Handouts</string>
+    <!-- Tab title for course info section -->
+    <string name="tab_label_course_info">Thông tin khóa học</string>
+    <!-- Button for last accessed course section. Will be followed by course name -->
+    <string name="last_accessed">Truy cập lần cuối</string>
+    <!-- Label shown when no courseware content is available -->
+    <string name="no_chapter_text">No courseware is currently available.</string>
+    <!-- Label shown when user is enrolled in no courses -->
+    <string name="no_courses_to_display">Bạn chưa đăng ký bất kỳ khóa học nào</string>
+    <!-- Label shown when no announcements are available for a course -->
+    <string name="no_announcements_to_display">Hiện tại chưa có thông báo nào cho khóa học này.</string>
+    <!-- Label shown when no handouts are available for a course -->
+    <string name="no_handouts_to_display">There are currently no handouts for this course.</string>
+    <!-- Label shown when there is no course information available for a course -->
+    <string name="no_information_to_display">Thông tin khóa học bổ sung hiện tại không có.</string>
+
+    <!-- Discussion Topics -->
+    <!-- Label for the discussion topics page -->
+    <string name="discussion_topics_title">Discussion topics</string>
+    <!--Hint displayed in search view for discussion posts-->
+    <string name="topics_search">Search all posts</string>
+
+    <!--Discussion Posts Fragment-->
+    <!--Title for discussion post search results-->
+    <string name="discussion_posts_search_title">Search results</string>
+    <!--Label for the the filter and sort options for refining the thread list -->
+    <string name="discussion_posts_refine">Refine:</string>
+    <!--Label for creating a new post-->
+    <string name="discussion_post_create_new_post">Create a new post</string>
+    <!--Label for creating a new comment-->
+    <string name="discussion_post_create_new_comment">@string/discussion_add_comment_title</string>
+    <!--Discussion posts filter options-->
+    <!--Discussion posts filter for all posts-->
+    <string name="discussion_posts_filter_all_posts">All Posts</string>
+    <!--Discussion posts filter for unread posts-->
+    <string name="discussion_posts_filter_unread_posts">Unread</string>
+    <!--Discussion posts filter for unanswered posts-->
+    <string name="discussion_posts_filter_unanswered_posts">Unanswered</string>
+    <!--Discussion posts sort options-->
+    <!--Discussion posts sort by recent activity-->
+    <string name="discussion_posts_sort_recent_activity">Recent Activity</string>
+    <!--Discussion posts sort by most activity-->
+    <string name="discussion_posts_sort_most_activity">Most Activity</string>
+    <!--Discussion posts sort by most votes-->
+    <string name="discussion_posts_sort_most_votes">Most Votes</string>
+    <!--Label for discussion post authored by the community TA-->
+    <string name="discussion_priviledged_author_label_ta">Community TA</string>
+    <!--Label for discussion post authored by the staff-->
+    <string name="discussion_priviledged_author_label_staff">Staff</string>
+    <!-- The label to use when indicating a post was authored by a privileged user -->
+    <string name="discussion_priviledged_author_attribution">By %s</string>
+    <!-- The date and author of a discussion comment, question, or thread, e.g. "3 days ago by Brian STAFF" -->
+    <string name="post_attribution">{time} by {author} {author_label}</string>
+    <!-- The date and author of an answer to a discussion question e.g. "Marked as answer 2 days ago by Khalid TA" -->
+    <string name="answer_author_attribution">Marked as answer {time} by {author} {author_label}</string>
+    <!-- The date and author of an endorsed response to a discussion thread e.g. "Endorsed 2 days ago by Khalid TA" -->
+    <string name="endorser_attribution">Endorsed {time} by {author} {author_label}</string>
+    <!-- Label for the visibility of a discussion post that is only visible to cohort -->
+    <string name="discussion_post_visibility_cohort">This post is visible only to {cohort}.</string>
+    <!-- Label for the visibility of a discussion post that is visible to everyone -->
+    <string name="discussion_post_visibility_everyone">This post is visible to everyone.</string>
+
+    <!--Discussion Responses-->
+    <!--Label for question type discussions that are answered-->
+    <string name="course_discussion_answered_title">Answered Question</string>
+    <!--Label for question type discussions that are unanswered-->
+    <string name="course_discussion_unanswered_title">Unanswered Question</string>
+    <!--Label for adding a discussion response-->
+    <string name="discussion_responses_add_response_button">@string/discussion_add_response_title</string>
+    <!--Label for number of discussion responses-->
+    <plurals name="number_responses_or_comments_responses_label">
+        <item quantity="one">%s response</item>
+        <item quantity="other">%s responses</item>
+    </plurals>
+    <!--Label for number of discussion comments-->
+    <plurals name="number_responses_or_comments_comments_label">
+        <item quantity="one">%s comment</item>
+        <item quantity="other">%s comments</item>
+    </plurals>
+    <!--Label for adding a new comment-->
+    <string name="number_responses_or_comments_add_comment_label">@string/discussion_add_comment_title</string>
+    <!--Label for indicating that a response is an answer-->
+    <string name="discussion_responses_answer">Answer</string>
+    <!--Label for indicating that a response is endorsed-->
+    <string name="discussion_responses_endorsed">Endorsed</string>
+    <!-- Label for time span when its less than a second after posting a response/comment -->
+    <string name="just_now">Just now</string>
+    <!-- Label for letting the user know his/her response was successfully added -->
+    <string name="discussion_response_posted">Your response has been added.</string>-->
+    <!-- Label for letting the user know his/her comment was successfully added -->
+    <string name="discussion_comment_posted">Your comment has been added.</string>
+
+    <!--Discussion Responses Action Bar-->
+    <!--Label to indicate number of votes-->
+    <plurals name="discussion_responses_action_bar_vote_text">
+        <item quantity="one">{quantity} vote</item>
+        <item quantity="other">{quantity} votes</item>
+    </plurals>
+    <!--Label to indicate discussion response is not marked as inappropriate -->
+    <string name="discussion_responses_report_label">Report</string>
+    <!--Label for discussion response that has been marked as inappropriate-->
+    <string name="discussion_responses_reported_label">Unreport</string>
+    <!--Label for a discussion thread that the user is not following-->
+    <string name="discussion_responses_action_bar_follow_text">Follow</string>
+    <!--Label for a discussion thread that the user is following-->
+    <string name="discussion_responses_action_bar_unfollow_text">Unfollow</string>
+
+    <!-- Title in adding a new comment -->
+    <string name="discussion_add_comment_title">Add a comment</string>
+    <!-- Title when adding a new comment is disabled -->
+    <string name="discussion_add_comment_disabled_title">Comments are closed for this response</string>
+    <!-- Title in showing list of comments -->
+    <string name="discussion_comments">Comments</string>
+    <!-- Add comment button title in adding a new comment -->
+    <string name="discussion_add_comment_button_label">Add comment</string>
+    <!-- Add comment button description for accessibility in adding a new comment -->
+    <string name="discussion_add_comment_button_description">Add comment button</string>
+    <!-- Add your comment placeholder in adding a new comment -->
+    <string name="discussion_add_comment_hint">@string/discussion_add_comment_title</string>
+
+    <!-- Title in adding a new response -->
+    <string name="discussion_add_response_title">Add a response</string>
+    <!-- Title when adding a new response is disabled -->
+    <string name="discussion_add_response_disabled_title">Responses are closed for this post</string>
+    <!-- Title in showing list of responses -->
+    <string name="discussion_responses">Responses</string>
+    <!-- Add response button title in adding a new response -->
+    <string name="discussion_add_response_button_label">Add response</string>
+    <!-- Add response button description for accessibility in adding a new response -->
+    <string name="discussion_add_response_button_description">Add response button</string>
+    <!-- Add your response placeholder in adding a new response -->
+    <string name="discussion_add_response_hint">@string/discussion_add_response_title</string>
+
+    <!-- Title placeholder in adding a new post -->
+    <string name="discussion_post_title">Tiêu đề</string>
+    <!-- Label for selected topic when creating a post -->
+    <string name="discussion_add_post_topic_selection">Chủ đề: {topic}</string>
+    <!-- Add post button title in adding a new discussion -->
+    <string name="discussion_add_post_button_label">Post discussion</string>
+    <!-- Add post button description for accessibility in adding a new discussion -->
+    <string name="discussion_add_post_button_description">Post discussion button</string>
+    <!-- Add post button title in adding a new post -->
+    <string name="discussion_add_question_button_label">Post question</string>
+    <!-- Add post button content description for accessibility in adding a new post -->
+    <string name="discussion_add_question_button_description">Post question button</string>
+    <!-- Add your post placeholder in adding a new post -->
+    <string name="discussion_body_hint_discussion">@string/discussion_title</string>
+    <!-- Add your post placeholder in adding a new post -->
+    <string name="discussion_body_hint_question">@string/discussion_question</string>
+    <!-- Question text in adding a new post -->
+    <string name="discussion_question">Câu hỏi</string>
+
+    <!-- Assessment -->
+    <!-- Label showing next sub-section on assessment navigation bar-->
+    <string name="assessment_next_unit">Phần Tiếp</string>
+    <!-- Label showing next unit in a sub-section on assessment navigation bar-->
+    <string name="assessment_next">Tiếp</string>
+    <!-- Label showing previous sub-section on assessment navigation bar-->
+    <string name="assessment_previous_unit">Phần trước</string>
+    <!-- Label showing previous unit in a sub-section on assessment navigation bar-->
+    <string name="assessment_previous">Trước</string>
+    <!-- Label for mode switch menu item-->
+    <string name="assessment_video_only">Chỉ Video</string>
+    <!-- Label for mode switch menu item-->
+    <string name="assessment_full_course">Đầy đủ</string>
+    <!-- Label for empty video in video only mode-->
+    <string name="assessment_empty_video_info">Không có videos nào trong There are no videos in this mục này. Để xem nội dụng khác trong mục, hãy chọn select {mode_switcher} bên trên và chuyển sang chế độ xem Đầy đủ.</string>
+    <!-- Label showing assessment only available on website-->
+    <string name="assessment_not_available">This interactive component isn’t yet available on mobile.</string>
+    <!-- Label showing assessment only available on website-->
+    <string name="assessment_explore_on_web">Khám phá các phần khác của khóa học này hoặc xem trên web.</string>
+    <!-- Button to show wiew on web for assessment-->
+    <string name="assessment_view_on_web">Xem trên Web</string>
+    <!-- Label for homework for assessment-->
+    <string name="assessment_homework">Bài tập</string>
+    <!-- Label to show empty assessment -->
+    <string name="assessment_empty">Không có tài liệu học tập trong phần này.</string>
+    <!-- Label to show a course will be starting soon -->
+    <string name="assessment_soon">Soon</string>
+    <!-- Label to notify user to rotate device for viewing a video in full screen -->
+    <string name="assessment_rotate_for_fullscreen">Xoay thiết bị của bạn để xem video trong chế độ toàn màn hình.</string>
+    <!-- Label showing only youtube is available -->
+    <string name="assessment_only_on_youtube">Video này chỉ có thể xem trên YouTube.</string>
+    <!-- Label for button to open on youtube -->
+    <string name="assessment_open_on_youtube">Xem video trên YouTube</string>
+
+    <!-- Video List -->
+    <!-- Label shown to indicate video currently downloading -->
+    <string name="started_downloading">Đang tải</string>
+    <!-- Title of video download screen -->
+    <string name="title_download">Downloads</string>
+
+    <!-- MyVideos -->
+    <!-- Title of all videos section -->
+    <string name="my_all_videos">Tất cả Video</string>
+    <!-- Title of recent videos section -->
+    <string name="my_recent_videos">Video gần đây</string>
+    <!-- Label indicating user has no Internet connection -->
+    <string name="offline_text">Chế độ Offline</string>
+    <!-- Label shown in videos section when user has no videos downloaded -->
+    <string name="no_videos_to_display">Bạn chưa tải về bất cứ video nào.</string>
+
+    <!-- My Downloads -->
+    <!-- Message indicating videos downloaded -->
+    <plurals name="text_download_msg">
+        <item quantity="one">Video đã tải</item>
+        <item quantity="other">Videos Downloaded</item>
+    </plurals>
+    <!-- Button action label to view an item -->
+    <string name="view_button_text">Xem</string>
+    <!-- Error text when downloading an item fails -->
+    <string name="download_failed_text">Download lỗi</string>
+    <!-- Message indicating a number of videos has begun. Argument is a number -->
+    <plurals name="downloading_count_videos">
+        <item quantity="zero">Download Failed</item>
+        <item quantity="one">Đang tải {quantity} video</item>
+        <item quantity="other">Đang tải {quantity} video</item>
+    </plurals>
+    <!-- Alert dialog title to confirm download of a large quantity of data -->
+    <string name="download_exceed_title">Large Download</string>
+    <!-- Alert dialog text at end of video -->
+    <string name="title_lecture_complete">You’ve reached the end of this video.</string>
+    <!-- Alert dialog prompt at end of video. -->
+    <string name="msg_lecture_complete">Would you like to watch the next video?</string>
+    <!-- Message shown video download in process -->
+    <string name="video_download_in_progress">Video Downloads in Progress</string>
+    <!-- Message shown a single video download begins -->
+    <string name="msg_started_one_video_download">"Downloading 1 Video"</string>
+    <!-- When a video download is about to start and we don't know it's file size yet -->
+    <string name="download_pending">Download pending…</string>
+    <!-- Error shown when video download fails -->
+    <string name="msg_video_not_downloaded">"Unable to download video"</string>
+    <!-- Error shown when video download fails -->
+    <string name="msg_video_not_available">This video is currently unavailable.\nCheck back again later.</string>
+    <!-- Error shown when video has flag to indicate it is not available for mobile app -->
+    <string name="video_only_on_web_label">This video is currently only on web. Click to view on web.</string>
+    <!-- Message to indicate the it is not available for mobile app  -->
+    <string name="video_only_on_web_short">This video isn’t yet available on mobile.</string>
+    <!-- Alert dialog title when login fails -->
+    <string name="login_error">Sign-in Error</string>
+    <!-- Alert dialog title when login fails due to lack of Internet -->
+    <string name="no_connectivity">Connection Error</string>
+
+    <!-- Wifi New Message -->
+    <!-- Toggle to allow downloads using cellular data -->
+    <string name="allow">Cho phép</string>
+    <!-- Toggle to disallow downloads using cellular data -->
+    <string name="do_not_allow">Không cho phép</string>
+
+    <!-- Player Settings -->
+    <!-- Label for closed captions in video player -->
+    <string name="lbl_closed_caption">Closed Captions</string>
+    <!-- Label for speed in video player -->
+    <string name="lbl_video_speed">Tốc độ Video</string>
+    <!-- Label for no closed captions selected -->
+    <string name="lbl_cc_cancel">None</string>
+    <!-- Accessibility Label for Video Player -->
+    <string name="video_player">Video Player</string>
+    <!-- Accessibility Label for View on Web button on Video Player top bar -->
+    <string name="video_player_view_on_web">Xem trên web</string>
+    <!-- Accessibility Label for Share button on Video Player top bar -->
+    <string name="video_player_share">Chia sẻ</string>
+    <!-- Accessibility Label for Play button of Video Player -->
+    <string name="video_player_play">Xem</string>
+    <!-- Accessibility Label for Pause button of Video Player -->
+    <string name="video_player_next">Tiếp</string>
+    <!-- Accessibility Label for Previous button of Video Player -->
+    <string name="video_player_previous">Trước</string>
+    <!-- Accessibility Label for Pause button of Video Player -->
+    <string name="video_player_pause">Tạm dừng</string>
+    <!-- Accessibility Label for Rewind button on Video Player bottom bar -->
+    <string name="video_player_rewind">Rewind</string>
+    <!-- Accessibility Label for Settings button on Video Player bottom bar -->
+    <string name="video_player_settings">Thiết lập</string>
+    <!-- Accessibility Label for Entering Fullscreen button on Video Player bottom bar -->
+    <string name="video_player_enter_fullscreen">Bật chế độ toàn màn hình</string>
+    <!-- Accessibility Label for Exiting Fullscreen button on Video Player bottom bar -->
+    <string name="video_player_exit_fullscreen">Thoát chế độ toàn màn hình</string>
+
+    <!-- Button label to bring up course finder -->
+    <string name="find_course_text">Bạn muốn nhận thử thách mới?</string>
+    <!-- Button label to bring up course finder -->
+    <string name="find_course_btn_text">Hãy tìm một khóa học trên mobile</string>
+    <!-- Button label to bring up course finder -->
+    <string name="signin_with_text">signing in to this app in with</string>
+    <!-- Message between sign in button and social login buttons -->
+    <string name="or_sign_in_with">Or sign in with</string>
+    <!-- Facebook login method -->
+    <string name="facebook_text">Facebook</string>
+    <!-- Google login method -->
+    <string name="google_text">Google</string>
+    <!-- Message on course list -->
+    <string name="course_not_listed_text">Không tìm thấy khóa học của bạn?</string>
+    <!-- Accessible content description of course not listed button on Course list screen -->
+    <string name="course_not_listed_btn">Can’t find one of your courses button</string>
+    <!-- Message on course page for course that hasn't started -->
+    <string name="course_content_available_text">Khóa học này chưa được bắt đầu. Hãy quay lại vào {start_time} để xem các video của bạn.</string>
+    <!-- Button text, allowing user to open the platform's website in a web browser -->
+    <string name="open_destination_btn_text">Mở {platform_destination} trong trình duyệt</string>
+    <!-- Title of find course screen -->
+    <string name="find_courses_title">Tìm các khóa học</string>
+    <!-- Message shown when attempting to find courses with no Internet connection -->
+    <string name="find_courses_offline_text">Bạn đang trong chế độ ngoại tuyến.\nĐể tìm kiếm khóa học, hãy kết nối Internet.</string>
+    <!-- Prompt allowing user to choose email program -->
+    <string name="email_chooser_header">Gửi email bằng...</string>
+    <!-- Error shown when user attempts to send email, but has no email app -->
+    <string name="email_client_not_present">No e-mail clients installed</string>
+
+    <!-- Landing Activity text -->
+    <!-- Prompt leading user to sign in screen -->
+    <string name="already_have_an_account">Bạn đã có tài khoản rồi? Hãy đăng nhập</string>
+    <!-- Prompt leading user to create account screen -->
+    <string name="sign_up_and_learn">Đăng ký và bắt đầu học tập nào</string>
+    <!-- In Sign up screen -->
+    <string name="sign_up_with">Đăng ký với</string>
+    <!-- In Sign up screen -->
+    <string name="or_sign_up_with_email">hoặc đăng ký với email</string>
+
+    <!-- Registration Screen -->
+    <!-- Create account agreement. Followed by list of agreement names like "End User License Agreement" -->
+    <string name="by_creating_account">Bằng cách tạo tài khoản {platform_name}, bạn đã đồng ý với </string>
+    <!-- Button text allowing user to show hidden optional registration fields -->
+    <string name="show_optional_text">Hiện trường không bắt buộc</string>
+    <!-- Button text allowing user to hide visible optional registration fields -->
+    <string name="hide_optional_text">Ẩn trường không bắt buộc</string>
+    <!-- Button text allowing user create an account -->
+    <string name="create_account_text">Tạo tài khoản của tôi</string>
+    <!-- Accessible content description of create account button on Registration screen -->
+    <string name="create_account_btn">Create my account button</string>
+    <!-- Text shown while waiting for registration request -->
+    <string name="creating_account_text">Đang khởi tạo tài khoản...</string>
+    <!-- Registration screen title -->
+    <string name="register_title">Đăng ký tài khoản {platform_name}</string>
+    <!-- Text for successful registration with social token  -->
+    <string name="sign_up_with_facebook_ok">Bạn đã đăng nhập thành công với Facebook.</string>
+    <string name="sign_up_with_google_ok">Bạn đã đăng nhập thành công với Google.</string>
+    <string name="sign_up_with_social_ok">Chúng tôi chỉ cần thêm một vài thông tin trước khi bạn bắt đầu học với {platform_name}.</string>
+    <!-- Continue registration after social login -->
+    <string name="complete_registration">Hoàn thành việc đăng ký của bạn</string>
+    <!-- Message shown when enrolling in a course fails-->
+    <string name="enrollment_failure">Hiện tại chúng tôi không thể ghi danh bạn vào khóa học này.</string>
+    <!-- Alert dialog button allowing user to repeat their attempted action -->
+    <string name="try_again">Thử lại</string>
+    <!-- Error shown when registering an account fails -->
+    <string name="sign_up_error">Tài khoản của bạn không thể khởi tạo. Hãy thử lại sau.</string>
+
+    <!-- data charges may apply dialog text -->
+    <!-- Alert dialog title shown for users whose in app data is zero rated, when they follow a link outside the app -->
+    <string name="open_external_url_title">Data charges may apply</string>
+    <!-- Alert dialog content shown for users whose in app data is zero rated, when they follow a link outside the app -->
+    <string name="open_external_url_desc">This link will open in your mobile browser, and you may incur additional data charges.</string>
+
+    <!-- Message shown when user tries to view course handouts, but none are loaded and the user is offline -->
+    <string name="offline_handouts_text">You are in offline mode. To view handouts, connect to the Internet.</string>
+    <string name="android">Android</string>
+
+    <!--  Email subject line when user attempts to submit feedback about the app -->
+    <string name="email_subject">Customer Feedback</string>
+    <!--  Submit Feedback app version text -->
+    <string name="app_version">App Version: </string>
+    <!--  Submit Feedback android version text -->
+    <string name="android_os_version">Android OS: </string>
+    <!--  Submit Feedback android model text -->
+    <string name="android_device_model">Device Model: </string>
+    <!--  Submit Feedback feedback text -->
+    <string name="insert_feedback">Feedback: </string>
+
+    <!-- Message indicating num of video deleted. {video_count} is a number of videos deleted, like "3".  -->
+    <plurals
+        name="deleted_video">
+        <item quantity="one">{video_count} video deleted </item>
+        <item quantity="other">{video_count} videos deleted</item>
+    </plurals>
+
+    <!-- Notification related -->
+    <!-- Template for notification title -->
+    <string name="course_announcement_notification_action">New Announcement</string>
+    <!-- toggle between subscribe and unsubscribe to course announcement -->
+    <string name="notification_toggle">Allow Notifications</string>
+    <!-- Placeholder title for course content with no title -->
+    <string name="untitled_block">Untitled</string>
+
+
+    <!-- Discussion/Forum -->
+    <string name="forum_no_results_for_search_query">No results found for “{search_query}”. Try another search term or select a discussion category to browse.</string>
+    <string name="forum_no_results_for_all_posts">There are no posts in this course discussion.</string>
+    <string name="forum_no_results_for_following">You are not following any posts.</string>
+    <string name="forum_no_results_in_category">There are no posts in this discussion category.</string>
+    <string name="forum_no_results_with_filter">Try removing your post filter.</string>
+    <string name="forum_post_i_am_following">Posts I’m Following</string>
+    <string name="show_more_records">More...</string>
+    <string name="forum_follow">Follow</string>
+    <string name="forum_unfollow">Unfollow</string>
+
+    <!-- User Profiles -->
+    <!-- Label for toolbar icon that launches the edit profile screen for the current user -->
+    <string name="profile_toolbar_edit_button">Edit</string>
+    <!-- Shown when viewing your own profile and you are not sharing a full profile -->
+    <string name="profile_sharing_limited_by_you">You are currently sharing a limited profile</string>
+    <!-- Shown when viewing another user's profile and that user is not sharing a full profile -->
+    <string name="profile_sharing_limited_by_other_user">This person is currently sharing a limited profile</string>
+    <!-- Shown when viewing your own profile until you have confirmed you are over the age of consent (13 years old) -->
+    <string name="profile_consent_needed_explanation">You must be over 13 to share a full profile.</string>
+    <!-- Shown as button below the explanation for age of consent; it launches the edit profile screen -->
+    <string name="profile_consent_needed_edit_button">Account Settings</string>
+    <!-- Shown when viewing your own incomplete profile -->
+    <string name="profile_incomplete_explanation">It looks like your profile isn’t complete yet. Let’s get you started.</string>
+    <!-- Shown as button below the explanation for incomplete profile; it launches the edit profile screen -->
+    <string name="profile_incomplete_edit_button">Get Started</string>
+    <!-- This text is shown in place of the "About Me" text if the user has not filled in their "About Me" -->
+    <string name="profile_incomplete_about_me">No “About me” info provided.</string>
+    <!-- Window title for edit profile screen -->
+    <string name="edit_user_profile_title">Sửa hồ sơ</string>
+    <!-- How most profile fields are formatted when viewing the edit screen -->
+    <string name="edit_user_profile_field">{label}: {value}</string>
+    <!-- Default placeholder if a profile field is blank -->
+    <string name="edit_user_profile_field_placeholder">Chọn</string>
+    <!-- Button that saves changes to a profile text field -->
+    <string name="edit_user_profile_textarea_submit_button">Submit</string>
+    <!-- An option that will set the user profile's primary language to the language of their device's configured locale -->
+    <string name="edit_user_profile_current_language">Ngôn ngữ hiện tại: {current_language}</string>
+    <!-- An option that will set the user profile's location to the country of their device's configured locale -->
+    <string name="edit_user_profile_current_location">Ví trị hiện tại: {current_location}</string>
+    <!-- Button label that will open gallery or camera for choosing new profile photo -->
+    <string name="edit_user_profile_change_photo">Thay đổi</string>
+    <!-- Button that will open a camera for taking a new profile photo -->
+    <string name="edit_user_profile_take_photo">Chụp hình</string>
+    <!-- Button that will open photo gallery for choosing a new profile photo -->
+    <string name="edit_user_profile_choose_photo">Chọn một ảnh</string>
+    <!-- Button that will open a camera for taking a new profile photo -->
+    <string name="edit_user_profile_remove_photo">Remove photo</string>
+    <!-- Title when cropping newly selected profile photo -->
+    <string name="edit_user_profile_photo_crop_title">Cắt và thay đổi kích cỡ</string>
+    <!-- Button that will exit the crop tool without saving the image -->
+    <string name="edit_user_profile_photo_crop_cancel">Cancel</string>
+    <!-- Button that will confirm the crop region and continue to upload the cropped photo -->
+    <string name="edit_user_profile_photo_crop_save">Chọn</string>
+
+</resources>

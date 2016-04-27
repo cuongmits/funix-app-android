@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.edx.mobile"
+    android:installLocation="auto" >
+
+    <!-- Required by app for server communication and video download -->
+    <!-- Required by Segment -->
+    <!-- Required by NewRelic -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Required by NewRelic -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Required by app for preventing screen lock while playing a video -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Required by app for performing downloads without showing download notification -->
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+    <!-- Required by app for storing downloaded videos to the external storage -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Required by legacy Google Sign In (TODO: Switch to new Google Sign In) -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <!-- Required by app for TelephonyManager to determine mobile network carrier ID -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- Sticky broadcast passing a message from one screen and display on another -->
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <permission android:protectionLevel="signature"
+        android:name="org.edx.mobile.permission.C2D_MESSAGE" />
+    <uses-permission android:name="org.edx.mobile.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="${supportsRtl}"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name=".base.RuntimeApplication" >
+
+        <activity
+            android:name="org.edx.mobile.view.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="org.edx.mobile.view.LaunchActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        
+        <activity
+            android:name="org.edx.mobile.view.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustNothing"
+            android:configChanges="keyboardHidden|orientation"
+            >
+        </activity>
+        
+        <activity
+            android:name="org.edx.mobile.view.MyCoursesListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="org.edx.mobile.view.CourseDashboardActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity
+            android:name="org.edx.mobile.view.CourseOutlineActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <activity
+            android:name=".view.CourseDiscussionTopicsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <activity android:name=".view.CourseDiscussionPostsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <activity android:name=".view.CourseDiscussionCommentsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <activity android:name=".view.CourseDiscussionResponsesActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <activity
+            android:name="org.edx.mobile.view.CourseUnitNavigationActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="user"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            >
+        </activity>
+
+        <activity
+            android:name="org.edx.mobile.view.CourseLectureListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+         
+        <activity
+            android:name="org.edx.mobile.view.MyVideosTabActivity"
+            android:label="@string/label_my_videos"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        
+        <activity
+            android:name="org.edx.mobile.view.DownloadListActivity"
+            android:label="@string/title_download"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+
+        <activity
+            android:name=".view.WebViewFindCoursesActivity"
+            android:label="@string/find_courses_title"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".view.NativeFindCoursesActivity"
+            android:label="@string/find_courses_title"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="org.edx.mobile.view.CourseInfoActivity"
+            android:label="@string/find_courses_title"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="org.edx.mobile.view.CourseDetailActivity"
+            android:label="@string/find_courses_title"
+            android:screenOrientation="portrait">
+        </activity>
+        
+        <activity
+            android:name="org.edx.mobile.view.VideoListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="org.edx.mobile.view.CourseHandoutActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.CourseAnnouncementsActivity"
+            android:label="@string/announcement_title"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="org.edx.mobile.view.DiscussionAddCommentActivity"
+            android:label="@string/discussion_add_comment_title"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="org.edx.mobile.view.DiscussionAddResponseActivity"
+            android:label="@string/discussion_add_response_title"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="org.edx.mobile.view.DiscussionAddPostActivity"
+            android:label="@string/discussion_post_create_new_post"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="org.edx.mobile.view.CertificateActivity"
+            android:label="@string/tab_label_certificate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="org.edx.mobile.view.SettingsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="org.edx.mobile.view.RegisterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".profiles.UserProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoShadow"
+            android:label=""/>
+
+        <activity android:name=".view.EditUserProfileActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".view.FormFieldActivity"
+            android:screenOrientation="portrait"
+            android:label=""
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity android:name=".view.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label=""/>
+
+        <activity android:name=".view.dialog.WebViewDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label=""/>
+
+        <receiver android:name="org.edx.mobile.module.download.DownloadCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+         
+        <!-- Setup for Code Coverage -->
+        <instrumentation
+            android:name="org.edx.mobile.instrumentation.EdxInstrumentation"
+            android:targetPackage="org.edx.mobile" >
+        </instrumentation>
+	
+        <!-- adb shell am broadcast -a org.edx.mobile.END_EMMA -->
+        <receiver android:name="org.edx.mobile.instrumentation.EndEmmaBroadcast" >
+            <intent-filter>
+                <action android:name="org.edx.mobile.END_EMMA" />
+            </intent-filter>
+        </receiver>
+		 
+        <!-- Setup Google -->
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Setup Facebook -->
+        <activity android:name="com.facebook.LoginActivity" />
+
+        <service android:name="org.edx.mobile.services.DownloadSpeedService" />
+
+        <receiver
+            android:name="org.edx.mobile.receivers.NetworkConnectivityReceiver"
+            android:label="NetworkChangeReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <!--   Parse Setup -->
+        <!--  https://www.parse.com/apps/quickstart#parse_push/android/existing  -->
+        <service android:name="com.parse.PushService" />
+        <!-- we have to add a level of indirection to avoid crash as parse maybe disabled by setting -->
+        <receiver android:name="org.edx.mobile.module.notification.EdxParseBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="org.edx.mobile.module.notification.EdxParsePushBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="org.edx.mobile" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

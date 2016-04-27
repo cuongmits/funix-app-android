@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/edx_grayscale_neutral_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/course_card_height">
+
+            <ImageView
+                android:id="@+id/header_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                tools:src="@drawable/edx_map_login" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="bottom"
+                android:background="@color/transparent_white_85"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/course_detail_name"
+                        style="@style/course_card_title"
+                        tools:text="Course Name" />
+
+                    <TextView
+                        android:id="@+id/course_detail_extras"
+                        style="@style/course_card_course_run"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="XX | xx | xxxxx" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/course_detail_share"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="bottom|right"
+                    android:background="@null"
+                    android:contentDescription="@string/share_course_button"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/abc_ic_menu_share_mtrl_alpha"
+                    android:tint="@color/edx_grayscale_neutral_black_t"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/header_play_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_media_play_inactive"
+                android:tint="@color/edx_grayscale_neutral_black_t"
+                android:visibility="invisible" />
+
+        </FrameLayout>
+
+        <View style="@style/gray_hairline_separator" />
+
+
+        <LinearLayout
+            android:id="@+id/dashboard_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:divider="@drawable/edx_divider"
+            android:showDividers="middle|end">
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+

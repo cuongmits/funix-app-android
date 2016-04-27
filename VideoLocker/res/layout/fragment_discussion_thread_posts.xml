@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/discussion_post_refine_layout_height"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/discussion_posts_refine_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/edx_margin"
+            android:layout_marginLeft="@dimen/edx_margin"
+            android:text="@string/discussion_posts_refine"
+            android:textColor="@color/edx_grayscale_neutral_base"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            style="?attr/popupSpinnerStyle"
+            android:id="@+id/discussion_posts_filter_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/edx_margin"
+            android:layout_marginLeft="@dimen/edx_margin"
+            android:minWidth="@dimen/discussion_posts_filter_popup_width"
+            tools:listitem="@layout/row_discussion_thread_dropdown"
+            tools:targetApi="17" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            style="?attr/popupSpinnerStyle"
+            android:id="@+id/discussion_posts_sort_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="@dimen/discussion_posts_filter_popup_width"
+            tools:listitem="@layout/row_discussion_thread_dropdown"
+            tools:targetApi="17" />
+
+    </LinearLayout>
+    
+    <View style="@style/gray_separator" />
+
+    <ListView
+        android:id="@+id/discussion_posts_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/edx_grayscale_neutral_x_light"
+        tools:listitem="@layout/row_discussion_thread"/>
+
+    <include layout="@layout/create_new_item_layout" />
+
+</LinearLayout>

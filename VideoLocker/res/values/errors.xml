@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- An error occurred but we don't know why -->
+    <string name="error_unknown">Lỗi không xác định. Hãy thử lại sau.</string>
+
+    <!-- Network error messages -->
+    <!-- Error shown when  user attempts an action but needs an internet connection -->
+    <string name="network_not_connected">Bạn đang không kết nối với Internet.</string>
+    <!-- Concise error shown when user attempts an action but needs an internet connection -->
+    <string name="network_not_connected_short">Không thể kết nối Mạng</string>
+    <!-- Alert dialog title shown when a network request fails -->
+    <string name="reset_no_network_title">Lỗi kết nối</string>
+    <!-- Alert dialog content shown when a network request fails because the user has no internet connection -->
+    <string name="reset_no_network_message">Bạn không kết nối với Internet. Hãy kiểm tra kết nối Internet.</string>
+    <!-- An error ocurred due to some kind of network failure -->
+    <string name="network_connected_error">Lỗi kết nối. Hãy kiểm tra kết nối Internet của bạn.</string>
+    <!-- Title of prompt indicating issue loading a video -->
+    <string name="network_error_header">Lỗi tải video</string>
+    <!-- Content of prompt indicating issue loading a video -->
+    <string name="network_error_message">Hãy kiểm tra kết nối Internet của bạn.</string>
+    <!-- The server we are trying to use is not available right now -->
+    <string name="network_service_unavailable">Dịch vụ không khả dụng. Xin vui lòng thử lại sau.</string>
+
+    <!-- Login error messages -->
+    <!-- Error shown during login when user attempts login without entering a username or e-mail -->
+    <string name="error_enter_email">Hãy nhập tên đăng nhập hoặc địa chỉ email và thử lại.</string>
+    <!-- Error shown during login when user enters an invalid email address -->
+    <string name="error_invalid_email">Hãy chắc chắn rằng email của bạn có định dạng đúng và hãy thử lại.</string>
+    <!-- Error shown during login when user attempts login without entering a password -->
+    <string name="error_enter_password">Hãy nhập mật khẩu và thử lại.</string>
+    <!-- Title of alert shown during login when user attempts login via Facebook without having linked their account -->
+    <string name="error_account_not_linked_title_fb">Tài khoản Facebook không kết nối với bất kỳ tài khoản {platform_name} nào</string>
+    <!-- Content of alert shown during login when user attempts login via Facebook without having linked their account -->
+    <string name="error_account_not_linked_desc_fb">Hãy chắc chắn rằng tài khoản Facebook của bạn được kết nối với tài khoản {platform_name} của bạn tren {platform_destination}</string>
+    <!-- Title of alert shown during login when user attempts login via Google without having linked their account -->
+    <string name="error_account_not_linked_title_google">Tài khoản Google không kết nối với bất kỳ tài khoản {platform_name} nào</string>
+    <!-- Content of alert shown during login when user attempts login via Google without having linked their account -->
+    <string name="error_account_not_linked_desc_google">Hãy chắc chắn rằng tài khoản Google của bạn được kết nối với tài khoản {platform_name} của bạn trên {platform_destination}</string>
+    
+    <!-- Download error messages -->
+    <!-- Label shown on video list item whose download failed -->
+    <string name="error_download_failed">Lỗi tải về</string>
+    <!-- Confirmation message shown when attempting to download a large quantity of video data -->
+    <string name="file_size_exceeded">Kích cỡ tệp tải về vượt qua dung lượng trống còn lại của thiết bị.</string>
+    <!-- Confirmation message shown when attempting to download a large quantity of video data -->
+    <string name="download_exceed_message">Dung lượng video bạn vừa chọn lớn hơn 1 GB.
+        Bạn có muốn tải về những video này?</string>
+    
+    <!-- Message shown when user attempts to download a video over cellular data,
+    but has chosen to only allow video downloads over wifi -->
+    <string name="wifi_off_message">Thiết lập tải về của bạn chỉ cho phép tải về thông qua Wi-Fi.
+        \n Hãy kết nối với mạng Wi-Fi hoặc là thay đổi thiết lập tải về của bạn.</string>
+    
+    <!-- Offline Access -->
+    <!-- Label shown when user attempts to view a course section that hasn't been synced -->
+    <string name="section_offline_header">Mục này không khả dụng trong chế độ ngoại tuyến</string>
+    <!-- Label shown when user attempts to view a course section that hasn't been synced -->
+    <string name="section_offline_message">Nếu bạn vừa tải về nội dung cho một mục khác nhau,
+        \nhãy vào mục đó để xem nội dung.</string>
+    <!-- Alert dialog title shown when user attempts to view a video that hasn't been synced -->
+    <string name="video_offline_header">Video này không khả dụng khi ngoại tuyến.</string>
+    <!-- Alert dialog content shown when user attempts to view a video that hasn't been synced -->
+    <string name="video_offline_message">Hãy chọn một video mà bạn vừa tải về trên thiết bị của bạn.</string>
+
+    <!-- Registration Error Messages -->
+
+    <!-- Error prompt shown during registration to indicate an empty field. Argument is a field name -->
+    <string name="error_enter_field">Hãy nhập %1$s của bạn.</string>
+    <!-- Error prompt shown during registration to indicate a field missing a selection. Argument is a field name -->
+    <string name="error_select_field">Hãy chọn %1$s của bạn.</string>
+    <!-- Error prompt shown during registration when a field entry is too short. Arguments are 1) a field name, 2) a number -->
+    <string name="error_min_length">%1$s phải có ít nhất %2$d ký tự.</string>
+    <!-- Error prompt shown during registration when a field entry is too long. Arguments are 1) a field name, 2) a number -->
+    <string name="error_max_length">%1$s không thể có nhiều hơn %2$d ký tự.</string>
+
+    <!-- Error message shown when a course hasn't started yet -->
+    <string name="course_not_started">Khóa học này chưa được bắt đầu.</string>
+
+</resources>
